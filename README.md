@@ -54,15 +54,17 @@ Add a Manual card to the dashboard and enter the YAML to configure it as desired
 Check out [smartIR](https://github.com/smartHomeHub/SmartIR) and find your device commands.
 
 ### Add a command file:
-create a json file inside the `/hacsfiles/silent-remotes-card/` for example tv.json and copy paste from the correct file from smartIR, or manually fill the commands.
-
+create a json file somewhere inside your www folder. for example: www/my-remotes(create this folder)/tv.json, and paste the commands from the correct file from smartIR, or manually fill the commands yourself.</br>
+after that, in the card configuration use: ``commandsFilePath: /local/my-remotes/tv.json`` , note that ``www`` folder is equal to ``local``
+</br>**do not create the json file where this card is installed, because after updates it will be deleted**
 ## Examples
 ### example1: AC remote
 
 ```
 type: custom:silent-remotes-card
 remote: remote.broadlink_remote
-commands: 1945.json
+commandsFilePath: /local/silent-remotes/1945.json
+theme: light
 title: Electra
 remoteType: ac
 callServiceProps:
@@ -76,13 +78,13 @@ the file with the commands is taken from `1945.json` found in the folder.
 ### example2: TV remote
 
 ```
-type: custom:silent-remote
-iconSize: 30
+type: custom:silent-remotes-card
 remote: remote.broadlink_remote
-commands: 1061.json
+commandsFilePath: /local/silent-remotes/1061.json
 theme: dark
 title: my samsung tv
 remoteType: tv
+iconSize: 25
 callServiceProps:
   domain: remote
   service: send_command
