@@ -4,8 +4,8 @@
 
 ### The card was tested with Broadlink, but should work for any other device/service.
 ## Demo
-<img src="demo1.png" width="200"/>
-<img src="demo2.png" width="200"/>
+![Preview Image](https://github.com/silentbil/silent-remotes-card/blob/main/demo1.png)
+![Preview Image](https://github.com/silentbil/silent-remotes-card/blob/main/demo2.png)
 
 ## HACS Installation (Preferred option with updates)
  - In the HACS Frontend, click the 3 dots in the upper right
