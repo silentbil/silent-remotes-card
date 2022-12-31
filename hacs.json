@@ -1,6 +1,6 @@
 {
-  "name": "Custom remote control card",
-  "content_in_root": false,
-  "render_readme": true,
+  "name": "Silent remotes card",
   "filename": "silent-remotes-card.js",
+  "render_readme": true,
+  "homeassistant": "0.95.4"
 }
