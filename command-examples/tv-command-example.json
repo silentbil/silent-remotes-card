@@ -1,4 +1,3 @@
-// example of tv commands
 {
     "supportedController": "Broadlink", // not required
     "commandsEncoding": "Base64", // not required, if exists - will add to each command a Base64 prefix as Broadlink expected
