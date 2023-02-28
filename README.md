@@ -61,7 +61,7 @@ after that, in the card configuration use: ``commandsFilePath: /local/my-remotes
 ```
 type: custom:silent-remotes-card
 remote: remote.broadlink_remote
-commandsFilePath: /local/silent-remotes/1945.json
+commandsFilePath: /local/my-remotes/1945.json
 theme: light
 title: Electra
 remoteType: ac
@@ -78,7 +78,7 @@ the file with the commands is taken from `1945.json` found in the folder.
 ```
 type: custom:silent-remotes-card
 remote: remote.broadlink_remote
-commandsFilePath: /local/silent-remotes/1061.json
+commandsFilePath: /local/my-remotes/1061.json
 theme: dark
 title: my samsung tv
 remoteType: tv
