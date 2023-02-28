@@ -3,28 +3,23 @@
 * AC remote control
 
 ### The card was tested with Broadlink, but should work for any other device/service.
+Feel free to request features / changes / issues report.
 ## Demo
 
 ![remoteBell-modified](https://github.com/silentbil/silent-remotes-card/blob/main/demo1.png)
 ![remoteBell-modified](https://github.com/silentbil/silent-remotes-card/blob/main/demo2.png)
 
 
-
 ## HACS Installation (Preferred option with updates)
+
+<a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=silentbil&repository=silent-remotes-card&category=plugin" target="_blank"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open your Home Assistant instance and open a repository inside the Home Assistant Community Store." /></a>
+
+## HACS manual Installation 
  - In the HACS Frontend, click the 3 dots in the upper right
  - Click 'Add Custom Repository'
  - Fill in the repo url https://github.com/silentbil/silent-remotes-card and choose 'Lovelace' category.
  - Install the custom card (should now appear in the Frontend)
  - HACS should automatically add the following to your resources:
-```
-url: /hacsfiles/silent-remotes-card/silent-remotes-card.js
-type: Javascript Module
-```
-
-## Manual Installation
- - Download [silent-remotes-card.js](https://github.com/silentbil/silent-remotes-card/blob/main/dist/silent-remotes-card.js)
- - Copy to www/community/silent-remotes-card/ (create the silent-remotes-card directory first)
- - Add the following to your resources
 ```
 url: /hacsfiles/silent-remotes-card/silent-remotes-card.js
 type: Javascript Module
