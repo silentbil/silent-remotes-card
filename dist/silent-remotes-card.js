@@ -67,6 +67,7 @@ let SilentRemotesCard = class SilentRemotesCard extends LitElement {
             this.fullData = data;
             if (this.remoteType === 'ac') {
                 this.acConfig = data;
+                this.readAcFromLocalStorage();
             }
         });
     }
@@ -317,6 +318,15 @@ let SilentRemotesCard = class SilentRemotesCard extends LitElement {
         </div>
       `;
     }
+    saveAcToLocalStorage() {
+        window.localStorage.setItem(this.title, JSON.stringify(this.acState));
+    }
+    readAcFromLocalStorage() {
+        const savedConfig = window.localStorage.getItem(this.title);
+        if (savedConfig) {
+            this.acState = JSON.parse(savedConfig);
+        }
+    }
     buildAcCommand(customCommand) {
         var _a;
         try {
@@ -341,6 +351,7 @@ let SilentRemotesCard = class SilentRemotesCard extends LitElement {
                 command,
                 entity_id: this.hass.states[this.config.remote].entity_id,
             });
+            this.saveAcToLocalStorage();
         }
         catch (e) {
             this.setError();
