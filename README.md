@@ -38,6 +38,18 @@ Add a Manual card to the dashboard and enter the YAML to configure it as desired
 | `title` | Title of the remote | None | No |  string |
 | `remoteType` | Type of remote control | None | Yes |  `tv` or `ac`  |
 | `callServiceProps` | Service to call | None | Yes |  Object with: `domain` and `service`  |
+| `entity` | Climate entity id | None | No |  string  |
+
+## entity mode (NEW)
+You can now simply use a climate entity (using smartIR) and skip the next steps of using external command file.<br />
+example:<br />
+```
+type: custom:silent-remotes-card
+theme: light
+title: Electra
+remoteType: ac
+entity: climate.salon_ac
+```
 
 ## Command file structure
 
